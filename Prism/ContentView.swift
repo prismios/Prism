@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Prism
 //
-//  Created by Adam Brayford on 2025-02-16.
+//  Created by dull on 2025-02-16.
 //
 
 import SwiftUI
