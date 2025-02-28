@@ -7,42 +7,26 @@
 
 import SwiftUI
 
-// MARK: - Onboarding Content
-struct OnboardingContent {
-    let title: String
-    let content: AnyView
-}
-
-// MARK: - Onboarding View
 struct OnboardingView: View {
     @State var currentStep: Int = 1
-    
-    var steps: [OnboardingContent] {
-        [
-            OnboardingContent(
-                title: "Welcome",
-                content: AnyView(OnboardingViewWelcome(currentStep: $currentStep))
-            ),
-            OnboardingContent(
-                title: "Shortcut",
-                content: AnyView(OnboardingViewShortcut(currentStep: $currentStep))
-            ),
-            OnboardingContent(
-                title: "Welcome",
-                content: AnyView(OnboardingViewWelcome(currentStep: $currentStep))
-            ),
-            OnboardingContent(
-                title: "Welcome",
-                content: AnyView(OnboardingViewWelcome(currentStep: $currentStep))
-            )
-        ]
-    }
     
     var body: some View {
         VStack {
             ProgressBar(currentStep: $currentStep)
-            steps[currentStep - 1].content
+            switch currentStep {
+            case 1:
+                OnboardingViewWelcome(currentStep: $currentStep)
+            case 2:
+                OnboardingViewShortcut(currentStep: $currentStep)
+            case 3:
+                OnboardingViewNotification(currentStep: $currentStep)
+            case 4:
+                OnboardingViewDone(currentStep: $currentStep)
+            default:
+                Text("Onboarding Complete")
+            }
         }
+        .background(PrismColors.background, ignoresSafeAreaEdges: .all)
     }
 }
 

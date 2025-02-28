@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressBar: View {
     @Binding var currentStep: Int
     
-    private func isActive(_ step: Int) -> Bool {
+    private func isActive(step: Int) -> Bool {
         step < currentStep
     }
     
@@ -20,12 +20,12 @@ struct ProgressBar: View {
             Image(systemName: "person.circle.fill")
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundStyle(isActive(0) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .foregroundStyle(isActive(step: 0) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
             // Line 1
             Rectangle()
-                .fill(isActive(1) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .fill(isActive(step: 1) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .frame(width: 80, height: 2)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
@@ -33,12 +33,12 @@ struct ProgressBar: View {
             Image(systemName: "square.2.layers.3d.top.filled")
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundStyle(isActive(1) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .foregroundStyle(isActive(step: 1) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
             // Line 2
             Rectangle()
-                .fill(isActive(2) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .fill(isActive(step: 2) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .frame(width: 80, height: 2)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
@@ -46,12 +46,12 @@ struct ProgressBar: View {
             Image(systemName: "bell.circle.fill")
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundStyle(isActive(2) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .foregroundStyle(isActive(step: 2) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
             // Line 3
             Rectangle()
-                .fill(isActive(3) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .fill(isActive(step: 3) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .frame(width: 80, height: 2)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
             
@@ -59,7 +59,7 @@ struct ProgressBar: View {
             Image(systemName: "checkmark.circle.fill")
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundStyle(isActive(3) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
+                .foregroundStyle(isActive(step: 3) ? PrismColors.progressBarPrimary : PrismColors.progressBarSecondary)
                 .animation(.easeInOut(duration: 0.3), value: currentStep)
         }
         .frame(width: PrismLayout.maxWidth)
@@ -84,7 +84,6 @@ struct ProgressBarExample: View {
             }
         }
         .padding()
-        .background(PrismColors.background)
     }
 }
 

@@ -10,12 +10,6 @@ import SwiftUI
 struct PrismButton: View {
     let title: String
     let action: () -> Void
-    let style: ButtonStyle
-    
-    enum ButtonStyle {
-        case primary
-        case secondary
-    }
     
     var body: some View {
         Button(action: action) {
@@ -28,7 +22,6 @@ struct PrismButton: View {
                 .frame(maxWidth: .infinity, minHeight: PrismLayout.buttonHeight)
                 .foregroundColor(PrismColors.textPrimary)
         }
-        .padding(.horizontal, PrismLayout.horizontalPadding)
     }
 }
 
