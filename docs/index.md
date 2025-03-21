@@ -1,3 +1,50 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+
+<style>
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+
+  a {
+    color: #bb86fc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  blockquote {
+    border-left: 4px solid #bb86fc;
+    padding-left: 16px;
+    color: #cccccc;
+    margin: 1em 0;
+  }
+
+  code {
+    background-color: #333333;
+    color: #ffb86c;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  pre {
+    background-color: #1e1e1e;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+</style>
+
 ![Prism Logo](https://github.com/prismios/Prism/blob/main/Assets/logo_small_transparent.png?raw=true)
 
 # Prism Documentation
