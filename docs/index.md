@@ -2,19 +2,18 @@
 
 # Prism Documentation
 
-Welcome to the official documentation for **Prism** — your ultimate iPhone customization tool. Prism brings powerful tweaks and visual enhancements to your device without the need for jailbreaking.
+Welcome to the official documentation for **Prism** — your ultimate iPhone customization tool. Prism brings powerful tweaks and visual enhancements to your iDevice(iOS 17+) without the need for jailbreaking.
 
 ---
 
 ## 📌 Table of Contents
 
 - [Introduction](#introduction)
-- [Capabilities](#capabilities)
-  - [Benefits](#benefits)
-  - [Limitations](#limitations)
-- [Functionality](#functionality)
+- [Pros & Cons](#pros/cons)
+  - [Pros](#pros)
+  - [Cons](#cons)
+- [Tweaks](#tweaks)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
 - [FAQ](#faq)
 - [Contributing](#contributing)
@@ -24,32 +23,39 @@ Welcome to the official documentation for **Prism** — your ultimate iPhone cus
 
 ## 🚀 Introduction
 
-**Prism** acts as a powerful, jailed alternative to traditional jailbreaks, offering customizable widgets, UI tweaks, and enhancements using sandboxed capabilities. Easily personalize your iPhone without compromising security.
+**Prism** acts as a powerful, jailed alternative to traditional jailbreaks, offering customizable icons, UI tweaks, Lockscreen themes, and enhancements using sandboxed capabilities. Easily personalize and tune your iPhone without compromising security or version.
 
 ---
 
-## ⚙️ Capabilities
+## ⚙️ Pros/Cons
 
-### Benefits
+### Pros
 - **No Jailbreak Required**: Enjoy tweaks without voiding your warranty.
-- **Custom Widgets**: Fully interactive and configurable.
 - **Native Feel**: Seamless integration with iOS.
-- **Safe and Secure**: Maintains Apple’s security mechanisms.
+- **Safe and Secure**: Maintains Apple’s security mechanisms, and has a negligable (likely 0%) chance of bootloops, spinlocks, etc.
+- **Any Modern Version**: Prism will never be properly patched, as it adheres to Apple's rules.
 
-### Limitations
+### Cons
 - **Limited System Access**: Some tweaks are restricted by iOS policies.
-- **No Kernel Patching**: Unlike jailbreaks, no deep system modifications.
-- **App Store Restrictions**: Prism cannot modify App Store apps.
+- **Performance**: Prism requires a shortcut to be ran at all times, possibly draining the battery (Still less than a modern jailbreak, though).
+- **App Store Restrictions**: Prism cannot modify existing apps or inject tweaks.
+- **Jank**: Since Prism uses clever, never-before seen methods for its tweaks, they may be prone to slight bugs, graphic errors, and/or unfixeable negative elements.
 
 ---
 
-## 🧑‍💻 Functionality
+## 🧑‍💻 Tweaks
 
-Prism offers a range of enhancements, including:
-- **Custom Widgets**: Create dynamic and interactive widgets.
-- **Theme Support**: Customize icons, wallpapers, and widgets.
-- **Gesture Control**: Implement custom gestures for faster navigation.
-- **App Lock**: Secure specific apps with biometric authentication.
+Prism utilizes a repository system, similar to your favourite jailbroken repository managers. 
+The capabilities of Prism tweaks are rapidly increasing and are only bound by the APIs provided by Swift and Shortcuts(surprisingly large).
+Currently, Prism has integration for the following tweak types:
+
+- **Icon Themes**: Infinitely tweak your icons to a near-jailbreak level. Prism allows for custom imports and provides a library of first and third-party themes.
+- **Icon Layout Tweaks**: Manage the icon's layout, size, etc within the widgets.
+- **HTML Widgets (HS+LS)**: Render HTML/CSS/JS on the homescreens or lockscreen.
+- **Lockscreen Themes**: Customize your lockscreen to a near-jailbreak level.
+- **Custom Sounds**: Override certain sound events on your iDevice through shortcuts.
+- **Dock Tweaks**: Hide your dock(Dockland method), add new functionality to it, and more!
+- **Button Rebinds**: Override certain action events on your iDevice through shortcuts.
 
 ---
 
@@ -57,23 +63,12 @@ Prism offers a range of enhancements, including:
 
 Follow these steps to install Prism:
 
-1. Download Prism from the official website.
-2. Follow the on-screen instructions.
-3. Grant necessary permissions.
-4. Enjoy customizing your device!
+1. Download Prism from the App Store.
+2. Follow the on-screen instructions within the app's onboarding process.
+3. Grant necessary permissions and install the necessary shortcut.
+4. Enjoy customizing your device! Further instructions are within the app.
 
-> **Note:** Prism is compatible with iOS 14 and later.
-
----
-
-## 🚦 Usage
-
-Once installed:
-
-- Open the Prism app.
-- Browse available tweaks.
-- Enable or disable tweaks using simple toggle switches.
-- Long press a widget to configure its settings.
+> **Note:** Prism is compatible with iOS 17.0 and later.
 
 ---
 
@@ -101,18 +96,6 @@ You can customize Prism’s behavior using the in-app settings. Example configur
 
 **Q: Does Prism affect battery life?**
 > Minimal impact. Performance is optimized using native resources.
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch`
-3. Commit your changes: `git commit -m 'Add new feature'`
-4. Push to the branch: `git push origin feature-branch`
-5. Open a pull request.
 
 ---
 
