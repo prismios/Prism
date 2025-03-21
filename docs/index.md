@@ -16,7 +16,6 @@ Welcome to the official documentation for **Prism** — your ultimate iPhone cus
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [FAQ](#faq)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
