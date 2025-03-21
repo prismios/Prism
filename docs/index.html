@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prism Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <style>
     body {
       font-family: 'Outfit', sans-serif;
@@ -55,6 +56,26 @@
       border-top: 1px solid #333;
       margin: 2rem 0;
     }
+    .material-icons {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+    th {
+      background-color: #2b2b2b;
+    }
   </style>
 </head>
 <body>
@@ -66,70 +87,61 @@
 
     <hr />
 
-    <h2 id="table-of-contents">📌 Table of Contents</h2>
+    <h2 id="table-of-contents"><span class="material-icons">menu_book</span> Table of Contents</h2>
     <nav>
-      <a href="#introduction">Introduction</a>
-      <a href="#pros-and-cons">Pros & Cons</a>
-      <a href="#functionality">Functionality</a>
-      <a href="#tweaks">Tweaks</a>
-      <a href="#installation">Installation</a>
-      <a href="#configuration">Configuration</a>
-      <a href="#faq">FAQ</a>
-      <a href="#license">License</a>
+      <a href="#introduction"><span class="material-icons">rocket</span>Introduction</a>
+      <a href="#pros-and-cons"><span class="material-icons">thumbs_up_down</span>Pros & Cons</a>
+      <a href="#functionality"><span class="material-icons">settings</span>Functionality</a>
+      <a href="#tweaks"><span class="material-icons">extension</span>Tweaks</a>
+      <a href="#installation"><span class="material-icons">download</span>Installation</a>
+      <a href="#configuration"><span class="material-icons">build</span>Configuration</a>
+      <a href="#faq"><span class="material-icons">help</span>FAQ</a>
+      <a href="#license"><span class="material-icons">description</span>License</a>
     </nav>
 
-    <h2 id="introduction">🚀 Introduction</h2>
+    <h2 id="introduction"><span class="material-icons">rocket</span> Introduction</h2>
     <p><strong>Prism</strong> is a powerful, jailed alternative to traditional jailbreaks, offering customizable icons, UI tweaks, lockscreen themes, and enhancements using sandboxed capabilities. Easily personalize and tune your iPhone without compromising security.</p>
 
-    <h2 id="pros-and-cons">⚙️ Pros and Cons</h2>
-    <h3>✅ Pros</h3>
-    <ul>
-      <li><strong>No Jailbreak Required</strong>: Enjoy tweaks without voiding your warranty.</li>
-      <li><strong>Native Feel</strong>: Seamless integration with iOS.</li>
-      <li><strong>Safe and Secure</strong>: Maintains Apple’s security mechanisms.</li>
-      <li><strong>Future-Proof</strong>: Resilient to patches due to Apple-compliant design.</li>
-    </ul>
+    <h2 id="pros-and-cons"><span class="material-icons">thumbs_up_down</span> Pros and Cons</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No Jailbreak Required</td>
+          <td>Limited System Access</td>
+        </tr>
+        <tr>
+          <td>Native Feel</td>
+          <td>Battery Impact (Minimal)</td>
+        </tr>
+        <tr>
+          <td>Safe and Secure</td>
+          <td>App Store Restrictions</td>
+        </tr>
+        <tr>
+          <td>Future-Proof Design</td>
+          <td>Minor Bugs Possible</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <h3>❗ Cons</h3>
-    <ul>
-      <li><strong>Limited Access</strong>: Certain tweaks are restricted by iOS.</li>
-      <li><strong>Battery Impact</strong>: Minimal due to efficient shortcuts.</li>
-      <li><strong>App Store Restrictions</strong>: Cannot modify existing apps.</li>
-      <li><strong>Minor Bugs</strong>: Some tweaks may experience glitches.</li>
-    </ul>
-
-    <h2 id="functionality">⚙️ Functionality</h2>
+    <h2 id="functionality"><span class="material-icons">settings</span> Functionality</h2>
     <p>Prism combines Apple’s Swift APIs and Shortcut Actions for customization. While the helper shortcut is essential, it has a minimal battery impact.</p>
 
-    <h2 id="tweaks">🤝 Tweaks</h2>
-    <p>Prism offers a tweak repository system, expanding its capabilities regularly. Here are some available tweak categories:</p>
-    <ul>
-      <li><strong>Icon Themes</strong>: Customize app icons using dynamic effects.</li>
-      <li><strong>Icon Layout Tweaks</strong>: Adjust grid layouts, sizes, and spacing.</li>
-      <li><strong>HTML Widgets</strong>: Add interactive HTML, CSS, and JS widgets.</li>
-      <li><strong>Lockscreen Themes</strong>: Customize the lockscreen with animations.</li>
-      <li><strong>Custom Sounds</strong>: Replace system sounds with personal choices.</li>
-      <li><strong>Dock Tweaks</strong>: Modify dock appearance with overlays and animations.</li>
-      <li><strong>Button Rebinds</strong>: Map hardware buttons to custom actions.</li>
-    </ul>
-
-    <h2 id="installation">📥 Installation</h2>
+    <h2 id="installation"><span class="material-icons">download</span> Installation</h2>
     <p>1. Download Prism from the App Store.<br />2. Follow the in-app instructions.<br />3. Grant necessary permissions.<br />4. Enjoy customizing!</p>
 
-    <h2 id="configuration">🛠 Configuration</h2>
-    <p>Adjust Prism using the in-app settings. Example configuration:</p>
-    <pre><code>{
-  "theme": "dark",
-  "widgetOpacity": 0.8,
-  "gestureControl": true
-}</code></pre>
-
-    <h2 id="faq">❓ FAQ</h2>
+    <h2 id="faq"><span class="material-icons">help</span> FAQ</h2>
     <p><strong>Q: Is Prism safe to use?</strong><br />Yes! Prism uses Apple-approved APIs, ensuring no security risks.</p>
     <p><strong>Q: Can I install third-party tweaks?</strong><br />Yes! Community-made tweaks are supported and reviewed for safety.</p>
     <p><strong>Q: Does Prism affect battery life?</strong><br />Battery impact is minimal due to optimized resources.</p>
 
-    <h2 id="license">📝 License</h2>
+    <h2 id="license"><span class="material-icons">description</span> License</h2>
     <p>Prism is licensed under the <a href="LICENSE">MIT License</a>.</p>
     <p>For more information, visit the <a href="https://github.com/prism-project">GitHub repository</a>.</p>
   </div>
