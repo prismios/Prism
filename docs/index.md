@@ -12,6 +12,7 @@ Welcome to the official documentation for **Prism** — your ultimate iPhone cus
 - [Pros & Cons](#pros/cons)
   - [Pros](#pros)
   - [Cons](#cons)
+- [Functionality](#functionality)
 - [Tweaks](#tweaks)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -31,30 +32,85 @@ Welcome to the official documentation for **Prism** — your ultimate iPhone cus
 ### Pros
 - **No Jailbreak Required**: Enjoy tweaks without voiding your warranty.
 - **Native Feel**: Seamless integration with iOS.
-- **Safe and Secure**: Maintains Apple’s security mechanisms, and has a negligable (likely 0%) chance of bootloops, spinlocks, etc.
+- **Safe and Secure**: Maintains Apple’s security mechanisms, and has a negligible (likely 0%) chance of bootloops, spinlocks, etc.
 - **Any Modern Version**: Prism will never be properly patched, as it adheres to Apple's rules.
 
 ### Cons
 - **Limited System Access**: Some tweaks are restricted by iOS policies.
-- **Performance**: Prism requires a shortcut to be ran at all times, possibly draining the battery (Still less than a modern jailbreak, though).
+- **Performance**: Prism requires a shortcut to be run at all times, possibly draining the battery (Still less than a modern jailbreak, though).
 - **App Store Restrictions**: Prism cannot modify existing apps or inject tweaks.
-- **Jank**: Since Prism uses clever, never-before seen methods for its tweaks, they may be prone to slight bugs, graphic errors, and/or unfixeable negative elements.
+- **Jank**: Since Prism uses clever, never-before-seen methods for its tweaks, they may be prone to slight bugs, graphic errors, and/or unfixable negative elements.
 
 ---
 
-## 🧑‍💻 Tweaks
+## ⚙️ Functionality
 
-Prism utilizes a repository system, similar to your favourite jailbroken repository managers. 
-The capabilities of Prism tweaks are rapidly increasing and are only bound by the APIs provided by Swift and Shortcuts(surprisingly large).
-Currently, Prism has integration for the following tweak types:
+Prism is largely powered by a unification between Apple's **native Swift APIs** and **Shortcut APIs/Actions**, which give us access to certain "private" APIs via XPC. Prism can communicate between itself(app and shortcut) via app groups and the local documents folder. **Prism requires the helper shortcut to be ran at all times**, but don't worry. It's quite seamlessly integrated with the system and has minimal battery impact; you wont even know it's there! Contrary to jailbreaks and exploits, as iOS gets updated, **we can only expect Prism to become more powerful**, as Apple continues to add unique actions to shortcuts and potentially useful APIs to their Swift toolkit.
 
-- **Icon Themes**: Infinitely tweak your icons to a near-jailbreak level. Prism allows for custom imports and provides a library of first and third-party themes.
-- **Icon Layout Tweaks**: Manage the icon's layout, size, etc within the widgets.
-- **HTML Widgets (HS+LS)**: Render HTML/CSS/JS on the homescreens or lockscreen.
-- **Lockscreen Themes**: Customize your lockscreen to a near-jailbreak level.
-- **Custom Sounds**: Override certain sound events on your iDevice through shortcuts.
-- **Dock Tweaks**: Hide your dock(Dockland method), add new functionality to it, and more!
-- **Button Rebinds**: Override certain action events on your iDevice through shortcuts.
+## 🤝 Tweaks
+
+Prism utilizes a **repository system**, similar to popular jailbroken repository managers. Its capabilities are rapidly expanding, leveraging Swift and Shortcuts APIs to provide near-jailbreak customization. Here's a breakdown of just a handful the available tweak categories and how they work:
+
+### **Icon Themes**
+- **Description**: Customize your app icons to achieve a near-jailbreak level of personalization. Import custom themes or explore a vast library of first- and third-party themes.
+- **Features**:
+  - Support for animated icons
+  - Dynamic icon effects
+  - Icon packs with one-tap apply
+- **How It Works**: Prism uses an iOS 17+ interactive widget to apply themes. It adapts to your wallpaper, creating a native feel. Pressing an icon triggers a helper shortcut that opens the corresponding app, ensuring seamless integration.
+
+### **Icon Layout Tweaks**
+- **Description**: Adjust your icon grid layout, spacing, and size for a cleaner or more customized aesthetic.
+- **Features**:
+  - Customize icon size and spacing
+  - Adjust margins and padding
+  - Save and apply multiple layouts
+- **How It Works**: Layout tweaks are applied via widgets that update in real time. Prism’s tweak JSON files allow manual adjustments for advanced users.
+
+### **HTML Widgets (HS+LS)**
+- **Description**: Add interactive or dynamic HTML, CSS, and JavaScript widgets to your homescreen or lockscreen.
+- **Features**:
+  - Display live data (e.g., weather, time)
+  - Create interactive animations
+  - Customize with CSS styles
+- **How It Works**: Prism uses WebKit views in widgets to render HTML content. Widgets can be pinned to the homescreen or layered over wallpapers. For lockscreens, they can be displayed using guided access or overlaid as static content.
+
+### **Lockscreen Themes**
+- **Description**: Redesign your lockscreen with dynamic visuals and custom elements.
+- **Method 1 (Recommended)**:
+  - **How It Works**: Prism replicates the PosterBoard app (Lockscreen view) using a free filesystem. With **Guided Access** enabled, it locks your phone to Prism’s lockscreen app, replicating Face ID authentication.
+  - **Pros**: Extensive customization, including animations and custom fonts.
+  - **Cons**: Limited notification support and no Raise-to-Wake.
+- **Method 2 (Alternative)**:
+  - **How It Works**: Uses a custom wallpaper overlay to mask elements like the clock, providing a minimal theme.
+  - **Pros**: Native notifications and Raise-to-Wake support.
+  - **Cons**: No interactivity, and updates are limited to once per minute.
+
+### **Custom Sounds**
+- **Description**: Replace system sounds with custom audio effects for specific events.
+- **Features**:
+  - Unlock sounds
+  - Notification sounds
+  - Custom charging sounds
+- **How It Works**: Prism uses shortcuts to trigger audio files stored within the app.
+
+### **Dock Tweaks**
+- **Description**: Modify your iPhone’s dock for both aesthetic and functional changes.
+- **Features**:
+  - Transparent docks
+  - Custom dock overlays
+  - Animated dock effects
+- **How It Works**: Visual overlays are applied using shortcuts. Prism offers a specialized "DockPlayer" tweak that integrates multimedia functionality.
+
+### **Button Rebinds**
+- **Description**: Remap hardware buttons to perform custom actions.
+- **Features**:
+  - Launch specific apps with button combinations
+  - Perform system functions
+  - Trigger shortcuts instantly
+- **How It Works**: Using accessibility APIs and event checks, Prism intercepts button inputs and reroutes them to your desired actions. Button rebinding is fully reversible and safe.
+
+Each tweak in Prism is designed to offer maximum personalization without compromising your device’s security. With ongoing updates and community contributions, the possibilities are constantly growing. Explore the tweak library and unlock your iPhone’s full potential with Prism!
 
 ---
 
@@ -98,8 +154,9 @@ You can customize Prism’s behavior using the in-app settings. Example configur
 
 ---
 
-## 📜 License
+## 📝 License
 
 Prism is licensed under the [MIT License](LICENSE).
 
 For more information, visit the [GitHub repository](https://github.com/prism-project).
+
