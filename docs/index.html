@@ -11,7 +11,10 @@
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <style>
-    /* Global Styles */
+    /* Reset & Global Styles */
+    * {
+      box-sizing: border-box;
+    }
     body {
       background-color: #121212;
       color: #e0e0e0;
@@ -19,19 +22,32 @@
       margin: 0;
       padding: 20px;
       line-height: 1.6;
+      display: flex;
+      justify-content: center;
     }
     a {
       color: #bb86fc;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     a:hover {
+      color: #d0a7ff;
       text-decoration: underline;
     }
     img {
       max-width: 100%;
       height: auto;
     }
-    /* Logo styling */
+    /* Container to limit width and center content */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    /* Header Logo */
     .logo {
       display: block;
       margin: 0 auto 20px;
@@ -39,266 +55,279 @@
     }
     /* Headings */
     h1, h2, h3, h4 {
-      border-bottom: 1px solid #333;
+      border-bottom: 2px solid #333;
       padding-bottom: 5px;
       margin-top: 1.5em;
     }
     h1 {
-      font-size: 2em;
+      font-size: 2.5em;
       text-align: center;
+      margin-bottom: 0.5em;
     }
     h2 {
-      font-size: 1.5em;
+      font-size: 1.8em;
       margin-top: 1.5em;
+      display: flex;
+      align-items: center;
+    }
+    h2 .material-icons {
+      margin-right: 10px;
     }
     h3 {
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-top: 1.2em;
     }
-    /* Material Icons */
+    /* Icons */
     .material-icons {
       vertical-align: middle;
-      font-size: 1.2em;
-      margin-right: 5px;
+      font-size: 1.4em;
     }
     /* Sections */
     section {
       margin-bottom: 2em;
     }
+    /* Code Blocks */
     pre, code {
       font-family: 'Courier New', Courier, monospace;
-      background-color: #1e1e1e;
-      padding: 5px 10px;
+      background-color: #2b2b2b;
+      padding: 8px 12px;
       border-radius: 5px;
     }
     pre {
       overflow-x: auto;
     }
+    /* Blockquotes */
     blockquote {
       border-left: 4px solid #bb86fc;
-      padding-left: 10px;
+      padding-left: 15px;
       color: #ccc;
       margin: 1em 0;
+      font-style: italic;
     }
+    /* Horizontal Rule */
     hr {
       border: none;
-      height: 1px;
+      height: 2px;
       background-color: #333;
       margin: 2em 0;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
+    /* Lists */
+    ul, ol {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
     }
-    li::before {
+    ul li, ol li {
+      margin-bottom: 0.5em;
+    }
+    ul li::before {
       content: "•";
       color: #bb86fc;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
-  <img src="https://github.com/prismios/Prism/blob/main/Assets/logo_small_transparent.png?raw=true" alt="Prism Logo" class="logo" />
+  <div class="container">
+    <img src="https://github.com/prismios/Prism/blob/main/Assets/logo_small_transparent.png?raw=true" alt="Prism Logo" class="logo" />
 
-  <h1>Prism Documentation</h1>
+    <h1>Prism Documentation</h1>
 
-  <p>Welcome to the official documentation for <strong>Prism</strong> — your ultimate iPhone customization tool. Prism brings powerful tweaks and visual enhancements to your iDevice (iOS 17+) without the need for jailbreaking.</p>
+    <p>Welcome to the official documentation for <strong>Prism</strong> — your ultimate iPhone customization tool. Prism brings powerful tweaks and visual enhancements to your iDevice (iOS 17+) without the need for jailbreaking.</p>
 
-  <hr>
+    <hr>
 
-  <section id="table-of-contents">
-    <h2><i class="material-icons">bookmark</i> Table of Contents</h2>
-    <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li>
-        <a href="#pros-cons">Pros &amp; Cons</a>
-        <ul>
-          <li><a href="#pros">Pros</a></li>
-          <li><a href="#cons">Cons</a></li>
-        </ul>
-      </li>
-      <li><a href="#functionality">Functionality</a></li>
-      <li><a href="#tweaks">Tweaks</a></li>
-      <li><a href="#installation">Installation</a></li>
-      <li><a href="#configuration">Configuration</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#license">License</a></li>
-    </ul>
-  </section>
+    <section id="table-of-contents">
+      <h2><i class="material-icons">bookmark</i> Table of Contents</h2>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li>
+          <a href="#pros-cons">Pros &amp; Cons</a>
+          <ul>
+            <li><a href="#pros">Pros</a></li>
+            <li><a href="#cons">Cons</a></li>
+          </ul>
+        </li>
+        <li><a href="#functionality">Functionality</a></li>
+        <li><a href="#tweaks">Tweaks</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#license">License</a></li>
+      </ul>
+    </section>
 
-  <hr>
+    <hr>
 
-  <section id="introduction">
-    <h2><i class="material-icons">rocket_launch</i> Introduction</h2>
-    <p><strong>Prism</strong> acts as a powerful, jailed alternative to traditional jailbreaks, offering customizable icons, UI tweaks, Lockscreen themes, and enhancements using sandboxed capabilities. Easily personalize and tune your iPhone without compromising security or version.</p>
-  </section>
+    <section id="introduction">
+      <h2><i class="material-icons">rocket_launch</i> Introduction</h2>
+      <p><strong>Prism</strong> acts as a powerful, jailed alternative to traditional jailbreaks, offering customizable icons, UI tweaks, lockscreen themes, and enhancements using sandboxed capabilities. Easily personalize and tune your iPhone without compromising security or version.</p>
+    </section>
 
-  <section id="pros-cons">
-    <h2><i class="material-icons">build</i> Pros/Cons</h2>
-    <h3 id="pros">Pros</h3>
-    <ul>
-      <li><strong>No Jailbreak Required</strong>: Enjoy tweaks without voiding your warranty.</li>
-      <li><strong>Native Feel</strong>: Seamless integration with iOS.</li>
-      <li><strong>Safe and Secure</strong>: Maintains Apple’s security mechanisms, and has a negligible (likely 0%) chance of bootloops, spinlocks, etc.</li>
-      <li><strong>Any Modern Version</strong>: Prism will never be properly patched, as it adheres to Apple's rules.</li>
-    </ul>
-    <h3 id="cons">Cons</h3>
-    <ul>
-      <li><strong>Limited System Access</strong>: Some tweaks are restricted by iOS policies.</li>
-      <li><strong>Performance</strong>: Prism requires a shortcut to be run at all times, possibly draining the battery (still less than a modern jailbreak, though).</li>
-      <li><strong>App Store Restrictions</strong>: Prism cannot modify existing apps or inject tweaks.</li>
-      <li><strong>Jank</strong>: Since Prism uses clever, never-before-seen methods for its tweaks, they may be prone to slight bugs, graphic errors, and/or unfixable negative elements.</li>
-    </ul>
-  </section>
+    <section id="pros-cons">
+      <h2><i class="material-icons">build</i> Pros/Cons</h2>
+      <h3 id="pros">Pros</h3>
+      <ul>
+        <li><strong>No Jailbreak Required</strong>: Enjoy tweaks without voiding your warranty.</li>
+        <li><strong>Native Feel</strong>: Seamless integration with iOS.</li>
+        <li><strong>Safe and Secure</strong>: Maintains Apple’s security mechanisms with virtually no risk of bootloops or spinlocks.</li>
+        <li><strong>Any Modern Version</strong>: Prism adheres to Apple's rules, ensuring compatibility.</li>
+      </ul>
+      <h3 id="cons">Cons</h3>
+      <ul>
+        <li><strong>Limited System Access</strong>: Some tweaks are restricted by iOS policies.</li>
+        <li><strong>Performance</strong>: Requires a helper shortcut to run at all times, potentially impacting battery life.</li>
+        <li><strong>App Store Restrictions</strong>: Cannot modify existing apps or inject tweaks.</li>
+        <li><strong>Jank</strong>: Some tweaks might have minor bugs or graphic errors.</li>
+      </ul>
+    </section>
 
-  <section id="functionality">
-    <h2><i class="material-icons">settings</i> Functionality</h2>
-    <p>Prism is largely powered by a unification between Apple's <strong>native Swift APIs</strong> and <strong>Shortcut APIs/Actions</strong>, which give us access to certain "private" APIs via XPC. Prism can communicate between itself (app and shortcut) via app groups and the local documents folder. <strong>Prism requires the helper shortcut to be ran at all times</strong>, but don't worry. It's seamlessly integrated with the system and has minimal battery impact—you won't even know it's there! As iOS gets updated, <strong>we can only expect Prism to become more powerful</strong>, as Apple continues to add unique actions to shortcuts and potentially useful APIs to their Swift toolkit.</p>
-  </section>
+    <section id="functionality">
+      <h2><i class="material-icons">settings</i> Functionality</h2>
+      <p>Prism leverages a unification of Apple’s <strong>native Swift APIs</strong> and <strong>Shortcut APIs/Actions</strong> to access certain "private" APIs via XPC. Communication is handled through app groups and the local documents folder. The helper shortcut runs seamlessly in the background with minimal battery impact, and as iOS evolves, so does Prism’s functionality.</p>
+    </section>
 
-  <section id="tweaks">
-    <h2><i class="material-icons">groups</i> Tweaks</h2>
-    <p>Prism utilizes a <strong>repository system</strong>, similar to popular jailbroken repository managers. Its capabilities are rapidly expanding, leveraging Swift and Shortcuts APIs to provide near-jailbreak customization. Here's a breakdown of just a handful of the available tweak categories and how they work:</p>
-    
-    <h3>Icon Themes</h3>
-    <ul>
-      <li><strong>Description</strong>: Customize your app icons to achieve a near-jailbreak level of personalization. Import custom themes or explore a vast library of first- and third-party themes.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Support for animated icons</li>
-          <li>Dynamic icon effects</li>
-          <li>Icon packs with one-tap apply</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Prism uses an iOS 17+ interactive widget to apply themes. It adapts to your wallpaper, creating a native feel. Pressing an icon triggers a helper shortcut that opens the corresponding app, ensuring seamless integration.</li>
-    </ul>
-    
-    <h3>Icon Layout Tweaks</h3>
-    <ul>
-      <li><strong>Description</strong>: Adjust your icon grid layout, spacing, and size for a cleaner or more customized aesthetic.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Customize icon size and spacing</li>
-          <li>Adjust margins and padding</li>
-          <li>Save and apply multiple layouts</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Layout tweaks are applied via widgets that update in real time. Prism’s tweak JSON files allow manual adjustments for advanced users.</li>
-    </ul>
-    
-    <h3>HTML Widgets (HS+LS)</h3>
-    <ul>
-      <li><strong>Description</strong>: Add interactive or dynamic HTML, CSS, and JavaScript widgets to your homescreen or lockscreen.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Display live data (e.g., weather, time)</li>
-          <li>Create interactive animations</li>
-          <li>Customize with CSS styles</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Prism uses WebKit views in widgets to render HTML content. Widgets can be pinned to the homescreen or layered over wallpapers. For lockscreens, they can be displayed using guided access or overlaid as static content.</li>
-    </ul>
-    
-    <h3>Lockscreen Themes</h3>
-    <ul>
-      <li><strong>Description</strong>: Redesign your lockscreen with dynamic visuals and custom elements.</li>
-      <li><strong>Method 1 (Recommended)</strong>:
-        <ul>
-          <li><strong>How It Works</strong>: Prism replicates the PosterBoard app (Lockscreen view) using a free filesystem. With <strong>Guided Access</strong> enabled, it locks your phone to Prism’s lockscreen app, replicating Face ID authentication.</li>
-          <li><strong>Pros</strong>: Extensive customization, including animations and custom fonts.</li>
-          <li><strong>Cons</strong>: Limited notification support and no Raise-to-Wake.</li>
-        </ul>
-      </li>
-      <li><strong>Method 2 (Alternative)</strong>:
-        <ul>
-          <li><strong>How It Works</strong>: Uses a custom wallpaper overlay to mask elements like the clock, providing a minimal theme.</li>
-          <li><strong>Pros</strong>: Native notifications and Raise-to-Wake support.</li>
-          <li><strong>Cons</strong>: No interactivity, and updates are limited to once per minute.</li>
-        </ul>
-      </li>
-    </ul>
-    
-    <h3>Custom Sounds</h3>
-    <ul>
-      <li><strong>Description</strong>: Replace system sounds with custom audio effects for specific events.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Unlock sounds</li>
-          <li>Notification sounds</li>
-          <li>Custom charging sounds</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Prism uses shortcuts to trigger audio files stored within the app.</li>
-    </ul>
-    
-    <h3>Dock Tweaks</h3>
-    <ul>
-      <li><strong>Description</strong>: Modify your iPhone’s dock for both aesthetic and functional changes.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Transparent docks</li>
-          <li>Custom dock overlays</li>
-          <li>Animated dock effects</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Visual overlays are applied using shortcuts. Prism offers a specialized "DockPlayer" tweak that integrates multimedia functionality.</li>
-    </ul>
-    
-    <h3>Button Rebinds</h3>
-    <ul>
-      <li><strong>Description</strong>: Remap hardware buttons to perform custom actions.</li>
-      <li><strong>Features</strong>:
-        <ul>
-          <li>Launch specific apps with button combinations</li>
-          <li>Perform system functions</li>
-          <li>Trigger shortcuts instantly</li>
-        </ul>
-      </li>
-      <li><strong>How It Works</strong>: Using accessibility APIs and event checks, Prism intercepts button inputs and reroutes them to your desired actions. Button rebinding is fully reversible and safe.</li>
-    </ul>
-    
-    <p>Each tweak in Prism is designed to offer maximum personalization without compromising your device’s security. With ongoing updates and community contributions, the possibilities are constantly growing. Explore the tweak library and unlock your iPhone’s full potential with Prism!</p>
-  </section>
+    <section id="tweaks">
+      <h2><i class="material-icons">groups</i> Tweaks</h2>
+      <p>Prism utilizes a <strong>repository system</strong> to manage tweaks, providing near-jailbreak customization through Swift and Shortcuts APIs. Below is an overview of some tweak categories:</p>
+      
+      <h3>Icon Themes</h3>
+      <ul>
+        <li><strong>Description</strong>: Customize your app icons for a personalized feel. Import custom themes or choose from an extensive library.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Animated icons</li>
+            <li>Dynamic icon effects</li>
+            <li>One-tap icon pack apply</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Uses an iOS 17+ widget to apply themes that adapt to your wallpaper. Icon taps trigger a helper shortcut that opens the app.</li>
+      </ul>
+      
+      <h3>Icon Layout Tweaks</h3>
+      <ul>
+        <li><strong>Description</strong>: Adjust icon grid layout, spacing, and size for a cleaner look.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Custom icon size and spacing</li>
+            <li>Adjustable margins and padding</li>
+            <li>Save and load multiple layouts</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Applied via real-time updating widgets with tweak JSON files for advanced users.</li>
+      </ul>
+      
+      <h3>HTML Widgets (HS+LS)</h3>
+      <ul>
+        <li><strong>Description</strong>: Add dynamic HTML, CSS, and JavaScript widgets to your home or lockscreen.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Live data display (e.g., weather, time)</li>
+            <li>Interactive animations</li>
+            <li>Customizable with CSS</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Renders HTML via WebKit views, usable on both home and lockscreens.</li>
+      </ul>
+      
+      <h3>Lockscreen Themes</h3>
+      <ul>
+        <li><strong>Description</strong>: Redesign your lockscreen with dynamic visuals and custom elements.</li>
+        <li><strong>Method 1 (Recommended)</strong>:
+          <ul>
+            <li><strong>How It Works</strong>: Replicates the PosterBoard app using a free filesystem and Guided Access for a secure lockscreen experience.</li>
+            <li><strong>Pros</strong>: Extensive customization including animations and custom fonts.</li>
+            <li><strong>Cons</strong>: Limited notification support and no Raise-to-Wake.</li>
+          </ul>
+        </li>
+        <li><strong>Method 2 (Alternative)</strong>:
+          <ul>
+            <li><strong>How It Works</strong>: Uses a custom wallpaper overlay to mask elements like the clock.</li>
+            <li><strong>Pros</strong>: Supports native notifications and Raise-to-Wake.</li>
+            <li><strong>Cons</strong>: No interactivity and updates are limited.</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3>Custom Sounds</h3>
+      <ul>
+        <li><strong>Description</strong>: Replace system sounds with custom audio effects.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Unlock sounds</li>
+            <li>Notification tones</li>
+            <li>Custom charging sounds</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Uses shortcuts to trigger and play audio files stored in the app.</li>
+      </ul>
+      
+      <h3>Dock Tweaks</h3>
+      <ul>
+        <li><strong>Description</strong>: Modify your iPhone’s dock for improved aesthetics and functionality.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Transparent docks</li>
+            <li>Custom overlays</li>
+            <li>Animated effects</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Visual overlays are applied via shortcuts, with specialized tweaks like "DockPlayer" for multimedia integration.</li>
+      </ul>
+      
+      <h3>Button Rebinds</h3>
+      <ul>
+        <li><strong>Description</strong>: Remap hardware buttons to trigger custom actions.</li>
+        <li><strong>Features</strong>:
+          <ul>
+            <li>Launch apps with button combos</li>
+            <li>Perform system functions</li>
+            <li>Trigger shortcuts instantly</li>
+          </ul>
+        </li>
+        <li><strong>How It Works</strong>: Uses accessibility APIs to intercept button inputs safely and reversibly.</li>
+      </ul>
+      
+      <p>Each tweak is designed for maximum personalization while maintaining device security. With ongoing updates and community contributions, the possibilities are continually expanding.</p>
+    </section>
 
-  <section id="installation">
-    <h2><i class="material-icons">file_download</i> Installation</h2>
-    <ol>
-      <li>Download Prism from the App Store.</li>
-      <li>Follow the on-screen instructions within the app's onboarding process.</li>
-      <li>Grant necessary permissions and install the necessary shortcut.</li>
-      <li>Enjoy customizing your device! Further instructions are within the app.</li>
-    </ol>
-    <blockquote>
-      <strong>Note:</strong> Prism is compatible with iOS 17.0 and later.
-    </blockquote>
-  </section>
+    <section id="installation">
+      <h2><i class="material-icons">file_download</i> Installation</h2>
+      <ol>
+        <li>Download Prism from the App Store.</li>
+        <li>Follow the in-app onboarding instructions.</li>
+        <li>Grant necessary permissions and install the helper shortcut.</li>
+        <li>Enjoy customizing your device!</li>
+      </ol>
+      <blockquote>
+        <strong>Note:</strong> Prism is compatible with iOS 17.0 and later.
+      </blockquote>
+    </section>
 
-  <section id="configuration">
-    <h2><i class="material-icons">settings_applications</i> Configuration</h2>
-    <p>You can customize Prism’s behavior using the in-app settings. Example configuration file:</p>
-    <pre><code>{
+    <section id="configuration">
+      <h2><i class="material-icons">settings_applications</i> Configuration</h2>
+      <p>Customize Prism’s behavior in the app settings. Example configuration file:</p>
+      <pre><code>{
   "theme": "dark",
   "widgetOpacity": 0.8,
   "gestureControl": true
 }</code></pre>
-  </section>
+    </section>
 
-  <section id="faq">
-    <h2><i class="material-icons">help_outline</i> FAQ</h2>
-    <p><strong>Q: Is Prism safe to use?</strong><br>
-      A: Yes! Prism uses Apple-approved APIs, ensuring no security vulnerabilities.</p>
-    <p><strong>Q: Can I install third-party tweaks?</strong><br>
-      A: Prism supports community-made tweaks, reviewed for safety.</p>
-    <p><strong>Q: Does Prism affect battery life?</strong><br>
-      A: Minimal impact. Performance is optimized using native resources.</p>
-  </section>
+    <section id="faq">
+      <h2><i class="material-icons">help_outline</i> FAQ</h2>
+      <p><strong>Q: Is Prism safe to use?</strong><br>
+      A: Yes! Prism uses Apple-approved APIs to ensure security.</p>
+      <p><strong>Q: Can I install third-party tweaks?</strong><br>
+      A: Prism supports community-made tweaks that are reviewed for safety.</p>
+      <p><strong>Q: Does Prism affect battery life?</strong><br>
+      A: The helper shortcut has a minimal impact, keeping performance optimized.</p>
+    </section>
 
-  <section id="license">
-    <h2><i class="material-icons">description</i> License</h2>
-    <p>Prism is licensed under the <a href="LICENSE">MIT License</a>.</p>
-    <p>For more information, visit the <a href="https://github.com/prism-project">GitHub repository</a>.</p>
-  </section>
+    <section id="license">
+      <h2><i class="material-icons">description</i> License</h2>
+      <p>Prism is licensed under the <a href="LICENSE">MIT License</a>.</p>
+      <p>For more details, visit the <a href="https://github.com/prism-project">GitHub repository</a>.</p>
+    </section>
+  </div>
 </body>
 </html>
