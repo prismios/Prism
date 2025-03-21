@@ -1,4 +1,4 @@
-![Prism Logo](/Assets/logo_small_transparent.png)
+![Prism Logo]([/Assets/logo_small_transparent.png](https://github.com/prismios/Prism/blob/main/Assets/logo_small_transparent.png?raw=true))
 
 # Prism Documentation
 
