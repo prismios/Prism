@@ -1,4 +1,4 @@
-![Prism Logo](Assets/logo_small_transparent.png)
+![Prism Logo](/Assets/logo_small_transparent.png)
 
 # Prism Documentation
 
